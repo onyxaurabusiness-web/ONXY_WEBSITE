@@ -1,0 +1,30 @@
+<svg class="art" viewBox="0 0 800 600" role="img" aria-label="Line illustration: three cabin windows at dusk above two seats, with a small side table and an OnyxAura bottle between them." xmlns="http://www.w3.org/2000/svg">
+<defs>
+<linearGradient id="cdusk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0b09"/><stop offset=".55" stop-color="#2b1f10"/><stop offset=".84" stop-color="#8a6a2c"/><stop offset="1" stop-color="#d6c06a"/></linearGradient>
+<clipPath id="cw1"><rect x="82" y="126" width="166" height="236" rx="83"/></clipPath>
+<clipPath id="cw2"><rect x="317" y="126" width="166" height="236" rx="83"/></clipPath>
+<clipPath id="cw3"><rect x="552" y="126" width="166" height="236" rx="83"/></clipPath>
+</defs>
+<rect class="ln dim" x="30" y="30" width="740" height="540"/>
+<path class="ln dim dash" d="M60 74 H740" stroke-dasharray="3 9"/><circle class="gd" cx="200" cy="74" r="4"/><circle class="gd" cx="400" cy="74" r="4"/><circle class="gd" cx="600" cy="74" r="4"/>
+<g data-depth="6">
+<rect class="ln fb" x="70" y="114" width="190" height="260" rx="95"/><rect fill="url(#cdusk)" x="82" y="126" width="166" height="236" rx="83"/>
+<rect class="ln fb" x="305" y="114" width="190" height="260" rx="95"/><rect fill="url(#cdusk)" x="317" y="126" width="166" height="236" rx="83"/>
+<rect class="ln fb" x="540" y="114" width="190" height="260" rx="95"/><rect fill="url(#cdusk)" x="552" y="126" width="166" height="236" rx="83"/>
+<g clip-path="url(#cw1)"><path d="M70 300 C110 284 150 296 180 284 C210 274 240 290 270 284 V380 H70Z" fill="#F4F1EC" fill-opacity=".1"/><rect x="82" y="126" width="166" height="40" fill="#161614"/></g>
+<g clip-path="url(#cw2)"><path d="M305 310 C345 292 390 306 420 292 C450 282 480 300 500 294 V380 H305Z" fill="#F4F1EC" fill-opacity=".1"/><rect x="317" y="126" width="166" height="40" fill="#161614"/></g>
+<g clip-path="url(#cw3)"><path d="M540 290 C580 274 620 290 650 276 C680 268 710 282 740 276 V380 H540Z" fill="#F4F1EC" fill-opacity=".1"/><rect x="552" y="126" width="166" height="40" fill="#161614"/></g>
+<rect class="ln dim" x="82" y="126" width="166" height="236" rx="83"/><rect class="ln dim" x="317" y="126" width="166" height="236" rx="83"/><rect class="ln dim" x="552" y="126" width="166" height="236" rx="83"/>
+<path class="gd" d="M146 168 h38 M381 168 h38 M616 168 h38"/>
+</g>
+<path class="ln dim" d="M50 396 H750" data-depth="8"/>
+<g data-depth="16">
+<path class="ln fb" d="M76 520 V452 Q76 414 114 414 H196 Q234 414 234 452 V520 Z"/><path class="ln dim" d="M96 520 V458 Q96 434 120 434 H190 Q214 434 214 458 V520"/>
+<path class="ln fb" d="M566 520 V452 Q566 414 604 414 H686 Q724 414 724 452 V520 Z"/><path class="ln dim" d="M586 520 V458 Q586 434 610 434 H680 Q704 434 704 458 V520"/>
+</g>
+<g data-depth="26">
+<ellipse class="ln fb" cx="400" cy="480" rx="62" ry="10"/><path class="ln" d="M400 490 V540"/><ellipse class="ln fb" cx="400" cy="546" rx="34" ry="6"/>
+<g transform="translate(372,364) scale(.0595)"><g class="fk"><polygon points="318,5 220,128 318,190"/><polygon points="217,162 318,222 317,745 193,688 237,222"/><polygon points="185,718 300,772 15,955"/><polygon points="329,793 490,967 385,1632 40,1950 0,1008"/><polygon points="393,1663 595,1940 68,1940"/></g><path class="gd" vector-effect="non-scaling-stroke" d="M352,5 V765 L527,953 L422,1633 L600,1937 L647,988 L449,695 L408,225 L430,160 V90 Z"/></g>
+<path class="ln fb" d="M430 436 L452 436 L448 476 L434 476 Z"/><path class="gd" d="M432 454 H450"/>
+</g>
+</svg>

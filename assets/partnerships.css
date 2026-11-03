@@ -1,0 +1,194 @@
+/* Partnerships: a private lounge, not a catalogue. Wireframe drawings, one proof you can edit, four brochures. */
+.pt-page main{overflow-x:clip}
+
+/* ---------- hero ---------- */
+.pt-hero{position:relative;isolation:isolate;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:150px 0 clamp(56px,9vh,110px);background:radial-gradient(ellipse 46% 60% at 76% 48%,rgba(197,179,88,.07),transparent 62%),#070707}
+.pt-grid{position:absolute;inset:0;z-index:-2;background-image:linear-gradient(rgba(244,241,236,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(244,241,236,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse 80% 85% at 72% 50%,#000 15%,transparent 78%);mask-image:radial-gradient(ellipse 80% 85% at 72% 50%,#000 15%,transparent 78%)}
+.pt-xh{position:absolute;z-index:-1;background:rgba(197,179,88,.28);opacity:0;transition:opacity .4s;pointer-events:none}
+.pt-xh.x{top:0;bottom:0;left:0;width:1px;transform:translateX(var(--cx,-20px))}
+.pt-xh.y{left:0;right:0;top:0;height:1px;transform:translateY(var(--cy,-20px))}
+.pt-hero.live .pt-xh{opacity:1}
+.pt-hero-in{position:relative;z-index:1;width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,5vw,80px);align-items:center}
+.pt-hero h1{font-size:clamp(46px,6.4vw,96px);max-width:11ch}
+.pt-hero .lead{margin-top:28px}
+.rooms-nav{display:flex;flex-wrap:wrap;margin-top:clamp(34px,5vw,56px);border:1px solid var(--line);width:fit-content;max-width:100%}
+.rooms-nav a{display:flex;align-items:baseline;gap:12px;padding:16px 22px;border-right:1px solid var(--line);font:600 11px 'Hanken Grotesk',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);transition:background .4s,color .4s}
+.rooms-nav a:last-child{border-right:0}
+.rooms-nav a span{font:italic 400 14px 'Bodoni Moda',serif;color:var(--gold);letter-spacing:.1em}
+.rooms-nav a:hover{background:var(--charcoal);color:var(--ivory)}
+.pt-hero .btnrow{margin-top:30px}
+
+/* the orbit: the mark at the centre, four rooms on the outer ring */
+.orbit{margin:0}
+.orbit svg{display:block;width:100%;height:auto;overflow:visible}
+@keyframes pt-fade{from{opacity:0}to{opacity:1}}
+@keyframes pt-draw{to{stroke-dashoffset:0}}
+@keyframes pt-spin{to{transform:rotate(360deg)}}
+.orbit path{fill:none}
+.orbit .ring{stroke:rgba(244,241,236,.2);stroke-width:1;stroke-dasharray:1;stroke-dashoffset:1;animation:pt-draw 2.6s var(--ease) .2s forwards}
+.orbit .spoke{stroke:rgba(197,179,88,.5);stroke-width:1;stroke-dasharray:1;stroke-dashoffset:1;animation:pt-draw 1.8s var(--ease) 1.2s forwards}
+.orbit .mk path{stroke:rgba(244,241,236,.9);stroke-width:12;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1;animation:pt-draw 2.6s var(--ease) .6s forwards}
+.orbit .mk path.g{stroke:var(--gold)}
+.orbit .dsh{fill:none;stroke:rgba(197,179,88,.55);stroke-width:1.2}
+.orbit .dot{fill:var(--gold)}
+.orbit .spin{animation:pt-spin 70s linear infinite}
+.orbit .spin.slow{animation-duration:110s}
+.orbit .spin.rev{animation-direction:reverse;animation-duration:150s}
+.orbit .spin:last-child{animation-duration:26s}
+.orbit .nd{cursor:pointer}
+.orbit .nd circle{fill:var(--obsidian);stroke:var(--gold);stroke-width:1.4;transform-box:fill-box;transform-origin:center;transition:transform .5s var(--ease),fill .4s}
+.orbit .nd circle.hit{fill:transparent;stroke:none}
+.orbit .nd text{font:600 12px 'Hanken Grotesk',sans-serif;letter-spacing:.2em;text-transform:uppercase;fill:rgba(244,241,236,.7);transition:fill .4s}
+.orbit .nd text.n{font:italic 400 16px 'Bodoni Moda',serif;letter-spacing:.1em;fill:var(--gold);text-transform:none}
+.orbit .nd.l text{text-anchor:end}
+.orbit .nd:hover circle:not(.hit),.orbit .nd:focus-visible circle:not(.hit){transform:scale(1.7);fill:var(--gold)}
+.orbit .nd:hover text:not(.n),.orbit .nd:focus-visible text:not(.n){fill:var(--ivory)}
+.orbit .nd:focus-visible{outline:none}
+
+/* ---------- rooms ---------- */
+.room{border-top:1px solid var(--line);scroll-margin-top:84px}
+.room.alt{background:var(--charcoal)}
+.room .split{align-items:center}
+.room .room-copy{max-width:520px}
+.room .caps{margin-bottom:0}
+.room-num{font:italic 400 clamp(72px,9vw,140px)/.9 'Bodoni Moda',serif;color:rgba(197,179,88,.28);margin-bottom:18px}
+.room-num.sm{font-size:clamp(40px,4vw,56px);margin:18px 0 6px}
+.room h2{margin:18px 0 26px;max-width:13ch}
+.room-links{display:flex;flex-direction:column;align-items:flex-start;gap:20px;margin-top:34px}
+.dl{display:inline-flex;align-items:center;gap:12px;font:600 12px 'Hanken Grotesk',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory);padding:14px 20px;border:1px solid var(--line);transition:border-color .4s,background .4s,color .4s}
+.dl svg{width:18px;height:18px;fill:none;stroke:var(--gold);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.dl .small{letter-spacing:.1em;color:var(--mute)}
+.dl:hover{border-color:var(--gold);background:rgba(244,241,236,.04);color:var(--gold)}
+.split.flip>figure{order:0}
+
+/* the drawings */
+.pt-fig{margin:0;position:relative;border:1px solid var(--line);background:#0a0a09}
+.pt-fig figcaption{padding:12px 16px;border-top:1px solid var(--line)}
+.art{width:100%;height:auto;display:block;overflow:visible}
+.art .ln{fill:none;stroke:#F4F1EC;stroke-opacity:.85;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.art .ln.fb{fill:#0b0b0a}
+.art .ln.dim,.art .dim{stroke-opacity:.28;stroke-width:1.5}
+.art .gd{fill:none;stroke:#C5B358;stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.art .gd.fb{fill:#0b0b0a}
+.art .fk{fill:#F4F1EC}
+.art [data-depth]{transition:transform .35s var(--ease);will-change:transform}
+
+/* hotspots */
+.hs-layer{position:absolute;left:0;right:0;top:0;aspect-ratio:4/3;pointer-events:none}
+.hs{position:absolute;left:var(--x);top:var(--y);width:26px;height:26px;margin:-13px 0 0 -13px;padding:0;border:1px solid var(--gold);background:rgba(7,7,7,.7);color:var(--gold);font:0/0 sans-serif;cursor:pointer;pointer-events:auto;transition:background .4s,color .4s,transform .4s var(--ease)}
+.hs::before,.hs::after{content:"";position:absolute;left:50%;top:50%;background:currentColor;transform:translate(-50%,-50%)}
+.hs::before{width:10px;height:1px}
+.hs::after{width:1px;height:10px;transition:transform .4s var(--ease)}
+.hs:hover,.hs[aria-expanded="true"]{background:var(--gold);color:var(--obsidian)}
+.hs[aria-expanded="true"]::after{transform:translate(-50%,-50%) rotate(90deg)}
+.hs:focus-visible{outline:2px solid var(--ivory);outline-offset:3px}
+.hs-card{position:absolute;z-index:3;width:min(260px,70%);padding:18px 20px;background:rgba(7,7,7,.96);border:1px solid var(--gold);pointer-events:none;animation:pt-fade .5s var(--ease)}
+.hs-card b{display:block;font:400 21px/1.2 'Bodoni Moda',serif;margin-bottom:8px}
+.hs-card span{display:block;font-size:14px;line-height:1.55;color:rgba(244,241,236,.85)}
+.hs-card[hidden]{display:none}
+
+/* the label proof */
+.proof{margin:0;border:1px solid var(--line);background:#0a0a09;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}
+.proof figcaption{grid-column:1/-1;padding:12px 16px;border-top:1px solid var(--line)}
+.proof-stage{display:grid;place-items:center;padding:24px 8px;border-right:1px solid var(--line);background:#070707}
+.proof-svg{display:block;width:100%;max-width:230px;height:auto;overflow:visible}
+.proof-svg path,.proof-svg rect{vector-effect:non-scaling-stroke}
+.pf-body{fill:rgba(244,241,236,.04);stroke:rgba(244,241,236,.85);stroke-width:1.4;stroke-linejoin:round}
+.pf-facet{fill:none;stroke:rgba(244,241,236,.3);stroke-width:1}
+.pf-lid{fill:rgba(197,179,88,.25);stroke:var(--gold);stroke-width:1.4}
+.pf-label{fill:#070707;stroke:rgba(244,241,236,.3);stroke-width:1}
+.pf-name{font:300 15px 'Hanken Grotesk',sans-serif;letter-spacing:.3em;fill:var(--ivory)}
+.pf-std text{font:600 4.6px 'Hanken Grotesk',sans-serif;letter-spacing:.2em;fill:var(--gold)}
+.proof-svg[data-v="glass"] .pf-can,.proof-svg[data-v="can"] .pf-glass{display:none}
+.proof-svg[data-c="ivory"] .pf-label{fill:#F4F1EC;stroke:#F4F1EC}
+.proof-svg[data-c="ivory"] .pf-name{fill:#070707}
+.proof-svg[data-c="ivory"] .pf-std text{fill:#6b5d1f}
+.proof-svg[data-v="can"][data-c="ivory"] .pf-body{fill:#F4F1EC}
+.proof-svg[data-v="can"] .pf-body{fill:#0b0b0a}
+.proof-svg[data-v="can"][data-c="ivory"] .pf-label{fill:transparent;stroke:none}
+.proof-svg[data-v="can"] .pf-label{fill:transparent;stroke:none}
+.proof-ui{padding:clamp(20px,3vw,34px);display:flex;flex-direction:column;gap:18px}
+.proof-ui .small{display:block}
+.pf-in{width:100%;background:transparent;border:0;border-bottom:1px solid var(--ivory);color:var(--ivory);font:300 clamp(22px,2.6vw,32px) 'Bodoni Moda',serif;padding:8px 0;letter-spacing:.04em;transition:border-color .4s}
+.pf-in:focus{outline:none;border-bottom-color:var(--gold)}
+.pf-in::placeholder{color:rgba(244,241,236,.3)}
+.pf-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.pf-row>.small{min-width:56px}
+.pf-row .seg button{padding:12px 18px}
+.pf-chk{display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.6;color:var(--mute);cursor:pointer}
+.pf-chk input{margin-top:4px;accent-color:var(--gold);flex:none}
+.proof-ui .btn{align-self:flex-start;margin-top:4px}
+
+/* the process */
+.process{margin-top:clamp(56px,8vw,110px);padding-top:30px;border-top:1px solid var(--gold)}
+.p-steps{list-style:none;display:grid;grid-template-columns:repeat(7,1fr);position:relative;margin-top:26px}
+.p-steps::before,.p-steps::after{content:"";position:absolute;left:0;top:21px;height:1px}
+.p-steps::before{right:0;background:var(--line)}
+.p-steps::after{width:calc(var(--i,0) / 6 * 100%);background:var(--gold);transition:width .8s var(--ease)}
+.ps{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:12px;width:100%;padding:0 10px 0 0;background:transparent;border:0;color:var(--mute);cursor:pointer;text-align:left;transition:color .4s}
+.ps .n{width:43px;height:43px;display:grid;place-items:center;background:var(--charcoal);border:1px solid var(--line);font:italic 400 20px 'Bodoni Moda',serif;color:var(--gold);transition:border-color .5s,background .5s}
+.ps .t{font:600 11px/1.5 'Hanken Grotesk',sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.ps:hover{color:var(--ivory)}
+.ps.done{color:var(--ivory)}
+.ps.on{color:var(--gold)}
+.ps.on .n{border-color:var(--gold);background:var(--obsidian)}
+.ps:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.p-read{margin-top:30px;min-height:2.6em;font-size:clamp(22px,2.6vw,34px);line-height:1.3;max-width:30ch}
+html:not(.js) .p-steps li::after{content:attr(data-d);display:block;margin-top:8px;font-size:13px;color:var(--mute)}
+
+/* ---------- the brochures ---------- */
+.brochures{border-top:1px solid var(--line)}
+.brochures h2{margin:20px 0 22px;max-width:12ch}
+.bro-grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(40px,5vw,64px)}
+.bro-grid li{background:var(--obsidian);padding:30px 26px 28px;display:flex;flex-direction:column;position:relative;transition:background .5s var(--ease)}
+.bro-grid li::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--gold);transition:width .7s var(--ease)}
+.bro-grid li:hover{background:var(--charcoal)}
+.bro-grid li:hover::after{width:100%}
+.bro-grid h3{font-size:clamp(26px,2.4vw,32px);margin-bottom:6px}
+.doc{width:46px;height:auto;margin-bottom:6px;overflow:visible}
+.doc path{fill:none;stroke-linejoin:round;stroke-linecap:round}
+.doc .ln{stroke:rgba(244,241,236,.8);stroke-width:1.3}
+.doc .gd{stroke:var(--gold);stroke-width:1.4}
+.bro-act{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:26px}
+.bro-act .btn{padding:14px 22px}
+
+.pt-close{border-top:1px solid var(--line);text-align:center}
+.pt-close h2{max-width:14ch;margin:0 auto}
+.pt-close .lead{margin:28px auto 0}
+.pt-close .btnrow{justify-content:center}
+
+@media(max-width:1000px){
+  .pt-hero{min-height:0;padding-top:130px}
+  .pt-hero-in{grid-template-columns:1fr;gap:44px}
+  .orbit{max-width:520px;margin:0 auto;width:100%}
+  .room .room-copy{max-width:none}
+  .proof{grid-template-columns:1fr}
+  .proof-stage{border-right:0;border-bottom:1px solid var(--line)}
+  .p-steps{grid-template-columns:1fr;margin-left:21px;border-left:1px solid var(--gold)}
+  .p-steps::before,.p-steps::after{display:none}
+  .ps{flex-direction:row;align-items:center;padding:0 0 18px;margin-left:-21px}
+  .ps .n{flex:none}
+  .bro-grid{grid-template-columns:repeat(2,1fr)}
+  .rooms-nav a{padding:16px 18px;flex:1 1 50%;border-bottom:1px solid var(--line)}
+  .rooms-nav a:nth-child(2n){border-right:0}
+}
+@media(max-width:560px){
+  .bro-grid{grid-template-columns:1fr}
+  .hs-card{width:min(240px,86%)}
+  .orbit .nd text{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+  .orbit .ring,.orbit .spoke,.orbit .mk path{animation:none;stroke-dashoffset:0}
+  .orbit .spin{animation:none}
+  .art [data-depth]{transition:none}
+  .hs-card{animation:none}
+}
+
+/* working with us */
+.terms-strip{border-top:1px solid var(--line);padding:clamp(56px,7vw,96px) 0}
+.ws{list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:28px}
+.ws li{background:var(--obsidian);padding:24px 22px;display:grid;gap:8px;align-content:start}
+.ws b{font:400 clamp(22px,2vw,30px)/1.1 'Bodoni Moda',serif;color:var(--gold)}
+.ws span{font-size:14px;color:var(--mute);line-height:1.5}
+@media(max-width:1000px){.ws{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.ws{grid-template-columns:1fr}}

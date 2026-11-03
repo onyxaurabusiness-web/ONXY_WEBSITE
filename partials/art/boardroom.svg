@@ -1,0 +1,26 @@
+<svg class="art" viewBox="0 0 800 600" role="img" aria-label="Line illustration: a long boardroom table in front of four tall windows, one OnyxAura bottle and one glass at the centre, soft light falling across the table." xmlns="http://www.w3.org/2000/svg">
+<rect class="ln dim" x="30" y="30" width="740" height="540"/>
+<g data-depth="6">
+<rect class="ln fb" x="70" y="76" width="150" height="214"/><rect class="ln fb" x="232" y="76" width="150" height="214"/><rect class="ln fb" x="418" y="76" width="150" height="214"/><rect class="ln fb" x="580" y="76" width="150" height="214"/>
+<path class="ln dim" d="M145 76V290M307 76V290M493 76V290M655 76V290M70 150H220M232 150H382M418 150H568M580 150H730"/>
+</g>
+<g data-depth="10">
+<path class="gd dash" d="M120 290L84 430M182 290L218 430M282 290L262 430M344 290L392 430M468 290L420 430M530 290L560 430M630 290L610 430M692 290L742 430" stroke-dasharray="3 9" stroke-opacity=".7"/>
+</g>
+<g data-depth="12">
+<rect class="ln dim" x="150" y="364" width="96" height="74" rx="22"/><rect class="ln dim" x="296" y="364" width="96" height="74" rx="22"/><rect class="ln dim" x="442" y="364" width="96" height="74" rx="22"/><rect class="ln dim" x="588" y="364" width="96" height="74" rx="22"/>
+</g>
+<g data-depth="18">
+<path class="ln fb" d="M120 438H680L744 528H56Z"/>
+<path class="ln dim" d="M120 438L96 470H704L680 438M96 470L74 528M704 470L726 528"/>
+<path class="ln" d="M56 528H744"/>
+</g>
+<g data-depth="30">
+<ellipse class="ln dim" cx="400" cy="500" rx="34" ry="6"/>
+<path class="ln fb" d="M392 396H408V410H392Z"/>
+<path class="ln fb" d="M394 410V430L378 450V500H422V450L406 430V410"/>
+<path class="gd" d="M378 450H422"/><path class="gd" d="M392 396H408"/>
+<path class="ln fb" d="M462 466H494L490 502H466Z"/><path class="gd" d="M465 482H491"/>
+<ellipse class="ln dim" cx="478" cy="506" rx="18" ry="4"/>
+</g>
+</svg>

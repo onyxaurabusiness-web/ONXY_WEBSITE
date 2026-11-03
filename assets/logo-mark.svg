@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 652 1950" role="img" aria-label="ONYXAURA">
+  <g fill="#F4F1EC">
+    <polygon points="318,5 220,128 318,190"/>
+    <polygon points="217,162 318,222 317,745 193,688 237,222"/>
+    <polygon points="185,718 300,772 15,955"/>
+    <polygon points="329,793 490,967 385,1632 40,1950 0,1008"/>
+    <polygon points="393,1663 595,1940 68,1940"/>
+  </g>
+  <g fill="none" stroke="#C5B358" stroke-width="7" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M352,5 V765 L527,953 L422,1633 L600,1937 L647,988 L449,695 L408,225 L430,160 V90 Z"/>
+    <path d="M527,953 L647,988"/>
+  </g>
+</svg>

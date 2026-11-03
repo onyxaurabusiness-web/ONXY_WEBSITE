@@ -1,0 +1,19 @@
+<svg class="art" viewBox="0 0 800 600" role="img" aria-label="Line illustration: contour lines closing around a single gold survey mark, with fine marks falling." xmlns="http://www.w3.org/2000/svg">
+<defs><radialGradient id="sg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#C5B358" stop-opacity=".18"/><stop offset="1" stop-color="#C5B358" stop-opacity="0"/></radialGradient></defs>
+<circle data-depth="4" cx="400" cy="300" r="270" fill="url(#sg)"/>
+<rect class="ln dim" x="30" y="30" width="740" height="540"/>
+<g data-depth="6">
+<path class="ln dim" d="M120 300 C110 190 230 110 380 104 C540 98 690 170 686 300 C682 430 560 506 400 500 C240 494 130 410 120 300 Z"/>
+<path class="ln dim" d="M170 300 C164 214 252 150 382 148 C516 146 636 206 632 300 C628 394 532 456 402 454 C272 452 176 386 170 300 Z"/>
+</g>
+<g data-depth="12">
+<path class="ln" d="M226 300 C222 238 292 192 384 192 C478 192 576 240 574 300 C572 362 502 408 404 408 C306 408 230 360 226 300 Z"/>
+<path class="ln" d="M282 300 C280 262 328 232 390 232 C452 232 520 262 518 300 C516 336 466 364 404 364 C342 364 284 338 282 300 Z"/>
+</g>
+<g data-depth="20">
+<path class="ln" d="M338 300 C338 282 362 270 392 270 C424 270 462 282 460 300 C458 318 430 326 402 326 C372 326 338 318 338 300 Z"/>
+<circle class="gd" cx="400" cy="298" r="10"/><path class="gd" d="M400 270 v-26 M400 326 v26 M360 298 h-26 M440 298 h26"/>
+</g>
+<g class="ln dim" data-depth="8"><path d="M60 560 H140"/><path d="M60 554 v12 M140 554 v12"/><path d="M730 70 v50"/><path d="M724 70 h12"/></g>
+<g data-depth="30" fill="#F4F1EC" fill-opacity=".5"><circle cx="170" cy="120" r="2"/><circle cx="250" cy="240" r="1.6"/><circle cx="330" cy="90" r="2"/><circle cx="470" cy="150" r="1.8"/><circle cx="560" cy="80" r="2"/><circle cx="640" cy="210" r="1.6"/><circle cx="120" cy="420" r="1.8"/><circle cx="260" cy="520" r="2"/><circle cx="520" cy="540" r="1.6"/><circle cx="680" cy="470" r="2"/><circle cx="590" cy="330" r="1.4"/><circle cx="200" cy="330" r="1.4"/></g>
+</svg>

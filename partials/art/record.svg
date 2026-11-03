@@ -1,0 +1,26 @@
+<svg class="art" viewBox="0 0 800 600" role="img" aria-label="Line illustration: a ledger page. The number 014 is outlined in large numerals beside a row of recorded entries, with a gold seal." xmlns="http://www.w3.org/2000/svg">
+<defs><radialGradient id="rg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#C5B358" stop-opacity=".2"/><stop offset="1" stop-color="#C5B358" stop-opacity="0"/></radialGradient></defs>
+<circle data-depth="4" cx="250" cy="300" r="260" fill="url(#rg)"/>
+<rect class="ln dim" x="30" y="30" width="740" height="540"/>
+<g data-depth="10">
+<text x="64" y="352" class="outline-num" font-family="'Bodoni Moda', Georgia, serif" font-style="italic" font-size="250" fill="none" stroke="#F4F1EC" stroke-width="2" stroke-opacity=".85">014</text>
+<path class="ln dim" d="M64 384 H430"/><path class="gd" d="M64 384 H190"/>
+</g>
+<g data-depth="16">
+<rect class="ln fb" x="470" y="110" width="250" height="44" rx="2"/>
+<rect class="ln fb" x="470" y="166" width="250" height="44" rx="2"/>
+<rect class="gd fb" x="470" y="222" width="250" height="44" rx="2"/>
+<rect class="ln fb" x="470" y="278" width="250" height="44" rx="2"/>
+<rect class="ln fb" x="470" y="334" width="250" height="44" rx="2"/>
+<path class="ln dim" d="M520 118 v28 M520 174 v28 M520 230 v28 M520 286 v28 M520 342 v28"/>
+<path class="ln dim" d="M538 132 H690 M538 188 H664 M538 244 H680 M538 300 H650 M538 356 H672"/>
+<path class="gd" d="M538 244 H680"/>
+<path class="gd dash" d="M430 244 H470" stroke-dasharray="3 6"/><circle class="gd" cx="430" cy="244" r="4"/>
+</g>
+<g data-depth="26">
+<circle class="gd fb" cx="600" cy="466" r="64"/><circle class="gd" cx="600" cy="466" r="52" stroke-opacity=".5"/>
+<g transform="translate(582,430) scale(.0369)"><g class="fk"><polygon points="318,5 220,128 318,190"/><polygon points="217,162 318,222 317,745 193,688 237,222"/><polygon points="185,718 300,772 15,955"/><polygon points="329,793 490,967 385,1632 40,1950 0,1008"/><polygon points="393,1663 595,1940 68,1940"/></g><path class="gd" vector-effect="non-scaling-stroke" d="M352,5 V765 L527,953 L422,1633 L600,1937 L647,988 L449,695 L408,225 L430,160 V90 Z"/></g>
+<path class="ln dim" d="M600 396 v-12 M600 536 v12 M530 466 h-12 M670 466 h12"/>
+</g>
+<g class="ln dim" data-depth="6"><path d="M64 470 H430 M64 500 H360 M64 530 H300"/></g>
+</svg>

@@ -1,0 +1,30 @@
+<svg class="art" viewBox="0 0 800 600" role="img" aria-label="Line illustration: a long table seen from above, six places set, two candles and one bottle at the centre." xmlns="http://www.w3.org/2000/svg">
+<defs><radialGradient id="tg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#C5B358" stop-opacity=".3"/><stop offset="1" stop-color="#C5B358" stop-opacity="0"/></radialGradient></defs>
+<rect class="ln dim" x="30" y="30" width="740" height="540"/>
+<circle data-depth="4" cx="300" cy="300" r="70" fill="url(#tg)"/><circle data-depth="4" cx="500" cy="300" r="70" fill="url(#tg)"/>
+<g data-depth="8">
+<rect class="ln fb" x="90" y="150" width="620" height="300" rx="20"/>
+<rect class="ln dim" x="112" y="172" width="576" height="256" rx="12"/>
+<path class="gd dash" d="M140 300 H660" stroke-dasharray="3 9" stroke-opacity=".6"/>
+</g>
+<g data-depth="12" class="chairs">
+<rect class="ln dim" x="178" y="104" width="64" height="26" rx="12"/><rect class="ln dim" x="368" y="104" width="64" height="26" rx="12"/><rect class="ln dim" x="558" y="104" width="64" height="26" rx="12"/>
+<rect class="ln dim" x="178" y="470" width="64" height="26" rx="12"/><rect class="ln dim" x="368" y="470" width="64" height="26" rx="12"/><rect class="ln dim" x="558" y="470" width="64" height="26" rx="12"/>
+</g>
+<g data-depth="18">
+<circle class="ln fb" cx="210" cy="224" r="38"/><circle class="ln dim" cx="210" cy="224" r="24"/>
+<circle class="ln fb" cx="400" cy="224" r="38"/><circle class="ln dim" cx="400" cy="224" r="24"/>
+<circle class="ln fb" cx="590" cy="224" r="38"/><circle class="ln dim" cx="590" cy="224" r="24"/>
+<circle class="ln fb" cx="210" cy="376" r="38"/><circle class="ln dim" cx="210" cy="376" r="24"/>
+<circle class="ln fb" cx="400" cy="376" r="38"/><circle class="ln dim" cx="400" cy="376" r="24"/>
+<circle class="ln fb" cx="590" cy="376" r="38"/><circle class="ln dim" cx="590" cy="376" r="24"/>
+<path class="ln dim" d="M158 200 v48 M262 200 v48 M348 200 v48 M452 200 v48 M538 200 v48 M642 200 v48 M158 352 v48 M262 352 v48 M348 352 v48 M452 352 v48 M538 352 v48 M642 352 v48"/>
+</g>
+<g data-depth="28">
+<circle class="ln" cx="262" cy="190" r="11"/><circle class="ln" cx="452" cy="190" r="11"/><circle class="ln" cx="642" cy="190" r="11"/>
+<circle class="ln" cx="262" cy="410" r="11"/><circle class="ln" cx="452" cy="410" r="11"/><circle class="ln" cx="642" cy="410" r="11"/>
+<circle class="ln fb" cx="300" cy="300" r="9"/><circle class="gd" cx="300" cy="300" r="3"/>
+<circle class="ln fb" cx="500" cy="300" r="9"/><circle class="gd" cx="500" cy="300" r="3"/>
+<circle class="ln fb" cx="400" cy="300" r="24"/><circle class="gd" cx="400" cy="300" r="15"/><circle class="ln" cx="400" cy="300" r="7"/>
+</g>
+</svg>

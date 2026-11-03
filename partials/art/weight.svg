@@ -1,0 +1,28 @@
+<svg class="art" viewBox="0 0 800 600" role="img" aria-label="Line illustration: a balance. An OnyxAura bottle rests on one pan, a gold weight on the other." xmlns="http://www.w3.org/2000/svg">
+<defs><radialGradient id="wg" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#C5B358" stop-opacity=".2"/><stop offset="1" stop-color="#C5B358" stop-opacity="0"/></radialGradient></defs>
+<circle data-depth="4" cx="400" cy="300" r="290" fill="url(#wg)"/>
+<rect class="ln dim" x="30" y="30" width="740" height="540"/>
+<path data-depth="6" class="ln dim dash" d="M96 150 A340 340 0 0 1 704 150" stroke-dasharray="3 9"/>
+<g data-depth="8">
+<path class="ln" d="M400 176 V502"/>
+<ellipse class="ln" cx="400" cy="518" rx="130" ry="14"/>
+<ellipse class="ln dim" cx="400" cy="518" rx="84" ry="8"/>
+<circle class="gd" cx="400" cy="164" r="12"/>
+<path class="ln" d="M150 176 H650"/>
+<circle class="ln" cx="150" cy="176" r="6"/><circle class="ln" cx="650" cy="176" r="6"/>
+<path class="ln dim" d="M400 178 V262"/><circle class="gd" cx="400" cy="272" r="9"/>
+</g>
+<g data-depth="16">
+<path class="ln dim" d="M150 182 L90 344 M150 182 L214 344"/>
+<path class="ln fb" d="M78 344 Q152 380 226 344 Z"/>
+<path class="ln dim" d="M650 182 L586 344 M650 182 L710 344"/>
+<path class="ln fb" d="M574 344 Q648 380 722 344 Z"/>
+</g>
+<g data-depth="26">
+<g transform="translate(122,164) scale(.0895)"><g class="fk"><polygon points="318,5 220,128 318,190"/><polygon points="217,162 318,222 317,745 193,688 237,222"/><polygon points="185,718 300,772 15,955"/><polygon points="329,793 490,967 385,1632 40,1950 0,1008"/><polygon points="393,1663 595,1940 68,1940"/></g><path class="gd" vector-effect="non-scaling-stroke" d="M352,5 V765 L527,953 L422,1633 L600,1937 L647,988 L449,695 L408,225 L430,160 V90 Z"/></g>
+<path class="gd fb" d="M614 344 L622 296 L674 296 L682 344 Z"/>
+<circle class="gd" cx="648" cy="284" r="9"/>
+<path class="ln dim" d="M630 316 H666"/>
+</g>
+<g class="ln dim" data-depth="10"><path d="M48 560 H752"/><path d="M120 556 v8 M220 556 v8 M320 556 v8 M420 556 v8 M520 556 v8 M620 556 v8 M720 556 v8"/></g>
+</svg>

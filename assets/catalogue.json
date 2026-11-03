@@ -1,0 +1,251 @@
+{
+  "_note": "Single source of truth for the shop: read by the build (product pages), the browser (cart, checkout) and the server (api/checkout.js prices every order from this file, never from the browser). Prices are the printed MRPs from the OnyxAura Product Master Dossier (3 November 2026). A pack may carry its own price (the Black Water box of six); otherwise a pack costs the unit price times its units. Products with \"status\": \"coming\" are shown but cannot be ordered.",
+  "pricesConfirmed": true,
+  "paymentsConnected": false,
+  "currency": "INR",
+  "maxPerLine": 12,
+  "shipping": {
+    "flat": 0,
+    "freeAbove": 0,
+    "label": "Confirmed on call",
+    "note": "Delivered across India, usually within one to two weeks. We call to confirm every order, and any delivery charge, before it is dispatched."
+  },
+  "products": [
+    {
+      "id": "incline",
+      "numeral": "I",
+      "name": "Incline",
+      "kind": "Mountain spring water",
+      "tagline": "Balanced high-mountain water, for the table.",
+      "lead": "From a glacier-fed spring high above the Kullu Valley. Crisp, balanced and quiet on the palate: the water that lets the table do the talking.",
+      "story": "Incline takes its name from the steep slopes above its source. Snowmelt seeps through granite and alpine meadow at about 2,500 metres and surfaces as a spring from a high cleft in the rock. We keep just enough of what the rock gives it for a smooth, balanced mouthfeel, and bottle it in clear glass so you can see exactly what you are pouring.",
+      "metaDescription": "OnyxAura Incline: glacier-fed Himalayan spring water in a 700 ml clear glass bottle. pH 7.5 to 7.9, TDS 80 to 120 ppm. MRP ₹399. Order online.",
+      "ph": [7.5, 7.9],
+      "tds": [80, 120],
+      "source": {
+        "region": "Himachal Pradesh",
+        "place": "Above the Kullu Valley",
+        "altitude": "About 2,500 m",
+        "terrain": "Alpine meadow, pine forest and granite",
+        "climate": "Around 4 °C through the year, with heavy winter snow",
+        "day": "The spring is checked at first light every morning, before anything is drawn."
+      },
+      "points": [
+        "pH 7.5 to 7.9 and TDS 80 to 120 ppm: a soft, balanced profile.",
+        "Sand and carbon, micron filtration, minerals balanced, then ozone and UV.",
+        "Clear 700 ml glass, with a batch and lot code on every bottle."
+      ],
+      "specs": [
+        ["Bottle", "Clear glass, tall and straight-sided"],
+        ["Closure", "Matte black screw cap with tamper band"],
+        ["Label", "Gold-foil mark and contour lines, printed direct"],
+        ["Shelf life", "18 to 24 months, stored cool and out of the sun"]
+      ],
+      "serve": "Serve cool, at 8 to 12 °C, straight from the bottle at the table. Keep it out of direct sunlight.",
+      "variants": [
+        {
+          "sku": "INC-GLS-700",
+          "format": "glass",
+          "label": "Glass bottle",
+          "volume": "700 ml",
+          "price": 399,
+          "thumb": "/assets/products/incline-thumb.jpg",
+          "card": ["/assets/products/incline-full.jpg", "/assets/products/incline-label.jpg"],
+          "images": [
+            { "src": "/assets/products/incline-full.jpg", "label": "The bottle" },
+            { "src": "/assets/products/incline-cap.jpg", "label": "Cap and mark" },
+            { "src": "/assets/products/incline-label.jpg", "label": "The label" },
+            { "src": "/assets/products/incline-base.jpg", "label": "The base" }
+          ],
+          "packs": [
+            { "units": 1, "label": "Single" },
+            { "units": 6, "label": "Case of 6" }
+          ]
+        }
+      ],
+      "defaultFormat": "glass",
+      "og": "/assets/products/incline-og.jpg"
+    },
+    {
+      "id": "black",
+      "numeral": "II",
+      "name": "Black Water",
+      "kind": "Alkaline water",
+      "tagline": "Naturally alkaline. Deep-mineral, crisp, unmistakable.",
+      "lead": "From a high-mountain spring in the north-western Himalaya, where the water runs through gneiss and ancient basalt and gathers its minerals on the way. Natural alkalinity gives it a clean, crisp finish.",
+      "story": "In the shadow of craggy peaks, a hidden spring runs clear and cold through rock laid down by ancient lava flows. The stone gives the water its minerals and its natural alkalinity, pH 8.0 to 9.5. We bottle it cold to keep that character, in a swing-top glass bottle for the table and a clear 500 ml can for everywhere else.",
+      "metaDescription": "OnyxAura Black Water: naturally alkaline Himalayan mountain water, pH 8.0 to 9.5. Swing-top glass bottle MRP ₹999, 500 ml can MRP ₹299, box of six ₹1,499.",
+      "ph": [8, 9.5],
+      "tds": [200, 300],
+      "source": {
+        "region": "North-western Himalaya",
+        "place": "A high mountain valley",
+        "altitude": "2,000 to 2,500 m",
+        "terrain": "Gneiss and basalt bedrock, mixed rocky forest",
+        "climate": "Around 8 °C on average, with summer monsoon and winter snow",
+        "day": "The flow is checked at dawn, while the mist still sits in the valley."
+      },
+      "points": [
+        "Naturally alkaline: pH 8.0 to 9.5, TDS 200 to 300 ppm.",
+        "Mineral-rich, from gneiss and ancient basalt.",
+        "Swing-top glass, a clear 500 ml can, or a box of six cans."
+      ],
+      "specs": [
+        ["Glass bottle", "Clear glass with a swing-top stopper, wire bail and seal"],
+        ["Can", "Clear body with an aluminium lid and pull tab"],
+        ["Box of six", "Matte black carton with a carry handle and a window"],
+        ["Shelf life", "18 to 24 months, stored cool and out of the sun"]
+      ],
+      "serve": "Serve cold, at 6 to 8 °C, in a tall glass. The swing-top reseals between pours.",
+      "variants": [
+        {
+          "sku": "BLK-GLS-700",
+          "format": "glass",
+          "label": "Swing-top glass bottle",
+          "volume": "700 ml",
+          "price": 999,
+          "thumb": "/assets/products/black-glass-thumb.jpg",
+          "card": ["/assets/products/black-glass-full.jpg", "/assets/products/black-glass-neck.jpg"],
+          "images": [
+            { "src": "/assets/products/black-glass-full.jpg", "label": "The bottle" },
+            { "src": "/assets/products/black-glass-neck.jpg", "label": "The swing-top" },
+            { "src": "/assets/products/black-glass-label.jpg", "label": "The mark" },
+            { "src": "/assets/products/black-glass-base.jpg", "label": "The base" }
+          ],
+          "packs": [
+            { "units": 1, "label": "Single" },
+            { "units": 6, "label": "Case of 6" }
+          ]
+        },
+        {
+          "sku": "BLK-CAN-500",
+          "format": "can",
+          "label": "Clear can",
+          "volume": "500 ml",
+          "price": 299,
+          "thumb": "/assets/products/black-can-thumb.jpg",
+          "card": ["/assets/products/black-can-full.jpg", "/assets/products/black-box-full.jpg"],
+          "images": [
+            { "src": "/assets/products/black-can-full.jpg", "label": "The can" },
+            { "src": "/assets/products/black-can-rim.jpg", "label": "Rim and mark" },
+            { "src": "/assets/products/black-can-mark.jpg", "label": "The wordmark" },
+            { "src": "/assets/products/black-can-base.jpg", "label": "Lower body" }
+          ],
+          "packs": [
+            { "units": 1, "label": "Single" },
+            {
+              "units": 6, "label": "Box of 6", "price": 1499,
+              "thumb": "/assets/products/black-box-thumb.jpg",
+              "images": [
+                { "src": "/assets/products/black-box-full.jpg", "label": "The box of six" },
+                { "src": "/assets/products/black-box-front.jpg", "label": "The front" },
+                { "src": "/assets/products/black-box-window.jpg", "label": "Through the window" },
+                { "src": "/assets/products/black-box-can.jpg", "label": "One of six" }
+              ]
+            }
+          ]
+        }
+      ],
+      "defaultFormat": "glass",
+      "og": "/assets/products/black-og.jpg"
+    },
+    {
+      "id": "himalayan",
+      "numeral": "III",
+      "name": "Himalayan",
+      "kind": "Spring water",
+      "tagline": "Pristine Himalayan spring water, in a clear can.",
+      "lead": "From a snow-fed spring in the Garhwal Himalaya, Uttarakhand, above 2,500 metres. The clear can lets you see exactly what you drink: crystal water, nothing hidden.",
+      "story": "Himalayan water runs through deep shale and glacial gravel before it surfaces as a spring in the conifer forests of Garhwal. It is fed by the monsoon and by the winter snow, and it reaches us cold, clear and near neutral. Every can is tested and coded, and its clear body shows the water exactly as it is.",
+      "metaDescription": "OnyxAura Himalayan: spring water from the Garhwal Himalaya, Uttarakhand, in a clear 500 ml can. pH 7.0 to 7.5, TDS 150 to 250 ppm. MRP ₹125. Order online.",
+      "ph": [7, 7.5],
+      "tds": [150, 250],
+      "source": {
+        "region": "Garhwal Himalaya, Uttarakhand",
+        "place": "A snow-fed spring",
+        "altitude": "Above 2,500 m",
+        "terrain": "Conifer forest, shale and glacial gravel",
+        "climate": "Around 3 °C on average, with monsoon rain and winter snow",
+        "day": "The water is drawn at first light, when the spring runs coldest."
+      },
+      "points": [
+        "pH 7.0 to 7.5 and TDS 150 to 250 ppm: near neutral, clean and crisp.",
+        "A clear 500 ml can: see exactly what you drink.",
+        "Single cans or a pack of six."
+      ],
+      "specs": [
+        ["Can", "Clear body with an aluminium lid and pull tab, 500 ml"],
+        ["Label", "Mountain line drawing, printed direct"],
+        ["Packs", "Single, or a pack of six"],
+        ["Shelf life", "18 to 24 months, stored cool and out of the sun"]
+      ],
+      "serve": "Serve chilled, straight from the can or poured over ice.",
+      "variants": [
+        {
+          "sku": "HIM-CAN-500",
+          "format": "can",
+          "label": "Clear can",
+          "volume": "500 ml",
+          "price": 125,
+          "thumb": "/assets/products/himalayan-thumb.jpg",
+          "card": ["/assets/products/himalayan-full.jpg", "/assets/products/himalayan-range.jpg"],
+          "images": [
+            { "src": "/assets/products/himalayan-full.jpg", "label": "The can" },
+            { "src": "/assets/products/himalayan-top.jpg", "label": "Rim and mark" },
+            { "src": "/assets/products/himalayan-range.jpg", "label": "The range" },
+            { "src": "/assets/products/himalayan-base.jpg", "label": "Lower body" }
+          ],
+          "packs": [
+            { "units": 1, "label": "Single" },
+            { "units": 6, "label": "Pack of 6" }
+          ]
+        }
+      ],
+      "defaultFormat": "can",
+      "og": "/assets/products/himalayan-og.jpg"
+    },
+    {
+      "id": "coconut",
+      "numeral": "IV",
+      "name": "Coconut",
+      "kind": "Coconut water",
+      "status": "coming",
+      "tagline": "Young coconut water, sealed in a can. Coming soon.",
+      "lead": "The water of young green coconuts from Karnataka, pressed, filtered and cold-filled into cans. No pulp, no preservatives. In preparation now.",
+      "story": "Coconuts are harvested green, opened hygienically and their water filtered and cold-filled the same day, so nothing is added to keep it. Coconut water is naturally rich in potassium, around 250 mg in every 100 ml, with a light sweetness and a nutty finish that change a little with the season.",
+      "metaDescription": "OnyxAura Coconut: young coconut water from Karnataka, cold-filled into a 500 ml can with no preservatives. Coming soon. Register your interest.",
+      "ph": [5, 5.4],
+      "source": {
+        "region": "Karnataka",
+        "place": "Coconut groves of southern India",
+        "altitude": "Near sea level",
+        "terrain": "Coastal and inland groves",
+        "climate": "Tropical, warm and humid",
+        "day": "Nuts are picked green and opened the same day."
+      },
+      "points": [
+        "100% young coconut water, no pulp, no preservatives.",
+        "Naturally about 250 mg potassium per 100 ml.",
+        "A 500 ml can. Coming soon."
+      ],
+      "specs": [
+        ["Can", "500 ml aluminium can"],
+        ["Natural pH", "5.0 to 5.4"],
+        ["Process", "Pressed, filtered and cold-filled"],
+        ["Status", "In preparation"]
+      ],
+      "serve": "Serve chilled.",
+      "variants": [
+        {
+          "sku": "COC-CAN-500",
+          "format": "can",
+          "label": "Can",
+          "volume": "500 ml",
+          "price": null,
+          "packs": [{ "units": 1, "label": "Single" }]
+        }
+      ],
+      "defaultFormat": "can"
+    }
+  ]
+}
