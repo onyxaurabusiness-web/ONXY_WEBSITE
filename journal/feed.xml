@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+<channel>
+  <title>ONYXAURA Journal</title>
+  <link>https://onyxaura.in/journal</link>
+  <atom:link href="https://onyxaura.in/journal/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Slow essays on the vessel, the table, the record and the cabin.</description>
+  <language>en</language>
+  <lastBuildDate>Wed, 04 Nov 2026 03:30:00 GMT</lastBuildDate>
+  <image><url>https://onyxaura.in/assets/logo-mark.png</url><title>ONYXAURA Journal</title><link>https://onyxaura.in/journal</link></image>
+  <item>
+    <title>Where the Water Begins</title>
+    <link>https://onyxaura.in/journal/where-the-water-begins</link>
+    <guid isPermaLink="true">https://onyxaura.in/journal/where-the-water-begins</guid>
+    <pubDate>Tue, 03 Nov 2026 03:30:00 GMT</pubDate>
+    <description>An essay on Himalayan springs: how snow becomes a spring, what the rock gives the water, and what pH and dissolved solids really tell you.</description>
+    <media:content url="https://onyxaura.in/assets/journal/where-the-water-begins-16x9.jpg" medium="image" type="image/jpeg" width="1200" height="675"/>
+  </item>
+  <item>
+    <title>The Weight of a Bottle</title>
+    <link>https://onyxaura.in/journal/the-weight-of-a-bottle</link>
+    <guid isPermaLink="true">https://onyxaura.in/journal/the-weight-of-a-bottle</guid>
+    <pubDate>Mon, 12 Oct 2026 03:30:00 GMT</pubDate>
+    <description>Why the vessel, the closure and the silence matter more than the label.</description>
+    <media:content url="https://onyxaura.in/assets/journal/the-weight-of-a-bottle-16x9.jpg" medium="image" type="image/jpeg" width="1200" height="675"/>
+  </item>
+  <item>
+    <title>On Numbering Things</title>
+    <link>https://onyxaura.in/journal/on-numbering-things</link>
+    <guid isPermaLink="true">https://onyxaura.in/journal/on-numbering-things</guid>
+    <pubDate>Mon, 12 Oct 2026 03:30:00 GMT</pubDate>
+    <description>An essay on why a number makes an object feel like it belongs to someone, and why the record behind it matters.</description>
+    <media:content url="https://onyxaura.in/assets/journal/on-numbering-things-16x9.jpg" medium="image" type="image/jpeg" width="1200" height="675"/>
+  </item>
+  <item>
+    <title>What a Table Says</title>
+    <link>https://onyxaura.in/journal/what-a-table-says</link>
+    <guid isPermaLink="true">https://onyxaura.in/journal/what-a-table-says</guid>
+    <pubDate>Mon, 12 Oct 2026 03:30:00 GMT</pubDate>
+    <description>An essay on the role of water at a dinner worth remembering, and what a table says before anyone sits.</description>
+    <media:content url="https://onyxaura.in/assets/journal/what-a-table-says-16x9.jpg" medium="image" type="image/jpeg" width="1200" height="675"/>
+  </item>
+  <item>
+    <title>Quiet Cabins</title>
+    <link>https://onyxaura.in/journal/quiet-cabins</link>
+    <guid isPermaLink="true">https://onyxaura.in/journal/quiet-cabins</guid>
+    <pubDate>Mon, 12 Oct 2026 03:30:00 GMT</pubDate>
+    <description>An essay on what private travellers notice in the details around them, and why the best service goes unnoticed.</description>
+    <media:content url="https://onyxaura.in/assets/journal/quiet-cabins-16x9.jpg" medium="image" type="image/jpeg" width="1200" height="675"/>
+  </item>
+</channel>
+</rss>
