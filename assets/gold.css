@@ -271,8 +271,8 @@ input[type=range].r:focus-visible{outline:2px solid var(--g4);outline-offset:4px
   .dg,.steps5::after,.a,.cert{transition:none}
 }
 
-/* ---------- launch round: the modelled bottle, its inspector and the concept sheet ---------- */
-.g-fallback{position:absolute;left:50%;top:50%;height:88%;width:auto;max-width:none;transform:translate(-50%,-50%);object-fit:contain;-webkit-mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);mask-image:radial-gradient(closest-side,#000 72%,transparent 100%);transition:opacity .8s var(--ease)}
+/* ---------- launch round: the modelled bottle, its inspector and the product shoot ---------- */
+.g-fallback{position:absolute;left:50%;top:50%;height:88%;width:auto;max-width:none;transform:translate(-50%,-50%);object-fit:contain;transition:opacity .8s var(--ease)}
 .viewer .g-fallback{height:92%}
 .live .g-fallback{opacity:0;pointer-events:none}
 .g-sub{margin-top:18px;max-width:40ch;color:rgba(246,239,220,.78);font-size:clamp(16px,1.3vw,18px);line-height:1.6}
@@ -289,11 +289,35 @@ input[type=range].r:focus-visible{outline:2px solid var(--g4);outline-offset:4px
 .g3-ov.dims .g3-dim{opacity:1}
 .v-ui{gap:12px 16px}
 .v-ui .seg button{padding:12px 14px}
-.sheet{margin:22px 0 0;border:1px solid rgba(197,179,88,.3);background:#0a0703}
-.sheet a{display:block;overflow:hidden}
-.sheet img{display:block;width:100%;height:auto;transition:transform 1.4s var(--ease),opacity .6s}
-.sheet a:hover img{transform:scale(1.03)}
-.sheet figcaption{padding:12px 14px;color:rgba(232,215,138,.72);border-top:1px solid rgba(197,179,88,.22)}
+/* the product shoot: four photographs, each opening full size */
+.shoot{margin-top:clamp(64px,8vw,112px)}
+.shoot-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px 24px;flex-wrap:wrap;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid rgba(197,179,88,.25)}
+.shoot-head .small{color:rgba(246,239,220,.62)}
+.shoot-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(8px,1.2vw,18px)}
+.shoot-grid li:nth-child(2){transition-delay:.08s}.shoot-grid li:nth-child(3){transition-delay:.16s}.shoot-grid li:nth-child(4){transition-delay:.24s}
+.shoot-grid a{position:relative;display:block;overflow:hidden;aspect-ratio:3/4;border:1px solid rgba(197,179,88,.3);background:#0a0703;cursor:zoom-in}
+.shoot-grid img{display:block;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.shoot-grid a:hover img,.shoot-grid a:focus-visible img{transform:scale(1.05)}
+.shoot-grid span{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;color:#f6efdc;letter-spacing:.14em;text-transform:uppercase;font-size:11px;background:linear-gradient(transparent,rgba(5,4,2,.78));opacity:.92}
+.lightbox{padding:0;margin:0;border:0;width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;background:rgba(5,4,2,.96);color:#f6efdc;overflow:hidden}
+.lightbox::backdrop{background:rgba(5,4,2,.6)}
+.lightbox[open]{display:grid;grid-template-rows:minmax(0,1fr) auto}
+.lb-fig{margin:0;min-height:0;display:grid;place-items:center;padding:clamp(56px,8vh,84px) clamp(16px,5vw,80px) 0}
+.lb-fig img{display:block;max-width:100%;max-height:100%;width:auto;height:auto;border:1px solid rgba(197,179,88,.3);animation:lbIn .5s var(--ease)}
+@keyframes lbIn{from{opacity:0;transform:scale(.985)}to{opacity:1;transform:none}}
+.lb-bar{display:flex;align-items:center;justify-content:center;gap:14px;padding:16px 16px max(20px,env(safe-area-inset-bottom))}
+.lb-bar output{min-width:150px;text-align:center;color:rgba(246,239,220,.78)}
+.lightbox .sq{border-color:rgba(232,215,138,.55);color:var(--g4)}
+.lightbox .sq:hover{background:var(--g4);color:var(--ink)}
+.lb-close{position:absolute;top:14px;right:14px}
+/* at the water's edge: the stone-spa photograph, full width */
+.g-band{position:relative;margin:0;height:min(80vh,780px);min-height:360px;overflow:hidden;background:#050402}
+.g-band img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 55%;transform:scale(1.08);transition:transform 2.6s var(--ease)}
+.g-band.in img{transform:scale(1)}
+.g-band::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(#050402,transparent 18%,transparent 70%,rgba(5,4,2,.85))}
+.g-band figcaption{position:absolute;left:0;right:0;bottom:clamp(22px,5vw,56px);z-index:1;text-align:center}
+@media(max-width:760px){.shoot-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.g-band{height:min(70vh,560px)}}
+@media (prefers-reduced-motion:reduce){.g-band img{transform:none;transition:none}.lb-fig img{animation:none}}
 .w-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin:34px 0 28px;background:rgba(197,179,88,.25);border:1px solid rgba(197,179,88,.25);max-width:860px}
 .w-facts div{background:rgba(10,7,3,.86);padding:18px 18px 20px;display:grid;gap:6px}
 .w-facts dt{font:600 10px 'Hanken Grotesk',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--g4)}

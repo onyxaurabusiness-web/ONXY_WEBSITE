@@ -84,6 +84,18 @@
     tdsScale();
   });
 
+  // a piece that is coming soon has photographs but nothing to choose: its thumbnails just change the picture
+  var sg = $('[data-soon-gallery]');
+  if (sg) {
+    var sMain = $('[data-main]', sg), sThumbs = $$('[data-view]', sg);
+    sThumbs.forEach(function (b) {
+      b.addEventListener('click', function () {
+        sThumbs.forEach(function (x) { var on = x === b; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on ? 'true' : 'false'); });
+        sMain.src = $('img', b).getAttribute('src'); sMain.alt = 'OnyxAura ' + D.name + ': ' + b.getAttribute('aria-label').toLowerCase();
+      });
+    });
+  }
+
   function buyBox(cat, product) {
     var state = { format: D.defaultFormat, units: 1, qty: 1, view: 0 };
     var variant = function () { return product.variants.filter(function (v) { return v.format === state.format; })[0]; };

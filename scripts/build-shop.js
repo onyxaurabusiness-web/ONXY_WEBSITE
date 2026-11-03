@@ -62,9 +62,10 @@ const crumbLd = (items) => ({ '@type': 'BreadcrumbList', itemListElement: items.
 /* ---------- collection ---------- */
 function card(p) {
   if (coming(p)) {
-    return `<article class="pcard soon" id="${p.id}" data-product="${p.id}" data-formats="${p.variants.map(v => v.format).join(' ')}">
+    const sd = defVar(p), pics = sd.card ? `<img class="a" src="${sd.card[0]}" alt="${esc(alt(p, sd))}" width="1000" height="1250" loading="lazy">` + (sd.card[1] ? `\n    <img class="b" src="${sd.card[1]}" alt="" width="600" height="750" loading="lazy">` : '') : canArt;
+    return `<article class="pcard soon${sd.card ? ' has-img' : ''}" id="${p.id}" data-product="${p.id}" data-formats="${p.variants.map(v => v.format).join(' ')}">
   <a class="pimg" href="/collection/${p.id}" aria-label="${esc(p.name)}: coming soon">
-    ${canArt}
+    ${pics}
     <span class="num serif">${p.numeral}</span><span class="soon-tag caps">Coming soon</span>
   </a>
   <div class="pbody">
@@ -153,7 +154,7 @@ function productPage(p) {
   const d = defVar(p), path_ = '/collection/' + p.id, soon = coming(p);
   const title = p.name + ': ' + p.tagline.replace(/\.$/, '').replace(/\. Coming soon$/, '') + ' — ONYXAURA';
   const others = cat.products.filter(x => x.id !== p.id);
-  const images = soon ? [] : [...new Set(p.variants.flatMap(v => v.images.map(i => SITE + i.src)))];
+  const images = [...new Set(p.variants.flatMap(v => (v.images || []).map(i => SITE + i.src)))];
   const ldProduct = {
     '@type': 'Product', '@id': SITE + path_ + '#product', name: 'OnyxAura ' + p.name, description: p.lead, category: p.kind,
     brand: { '@type': 'Brand', name: 'ONYXAURA' }, url: SITE + path_,
@@ -199,14 +200,18 @@ function productPage(p) {
   </div>
 </section>`;
   const more = others.map(o => {
-    const od = defVar(o), pic = coming(o) ? `<span class="mimg soon">${canArt}</span>` : `<span class="mimg"><img src="${od.card[0]}" alt="${esc(alt(o, od))}" width="1000" height="1250" loading="lazy"></span>`;
+    const od = defVar(o), pic = od.card ? `<span class="mimg"><img src="${od.card[0]}" alt="${esc(alt(o, od))}" width="1000" height="1250" loading="lazy"></span>` : `<span class="mimg soon">${canArt}</span>`;
     return `<a class="mini-card" href="/collection/${o.id}">${pic}<span class="serif num">${o.numeral}</span><b class="serif">${esc(o.name)}</b><span class="tag">${esc(o.tagline)}</span><span class="caps go">${coming(o) ? 'Coming soon' : 'From ' + inr(fromPrice(o)) + ' MRP'}</span></a>`;
   }).join('');
   const pageHead = head({ title, desc: p.metaDescription, path: path_, ld, ogType: 'product', og: p.og ? { src: p.og, w: 1200, h: 630, alt: 'OnyxAura ' + p.name + ' on black.' } : { src: '/assets/products/collection-og.jpg', w: 1200, h: 630, alt: 'The OnyxAura collection.' } });
 
   let gallery, panel;
   if (soon) {
-    gallery = `<div class="gallery soon-gallery"><div class="vstage soon">${canArt}<span class="soon-tag caps">Coming soon</span></div></div>`;
+    // photographs if there are any (the thumbnails only change the picture: there is nothing to choose yet), else a drawing
+    gallery = d.images ? `<div class="gallery soon-gallery" data-soon-gallery>
+      <div class="vstage"><img data-main src="${d.images[0].src}" alt="${esc(alt(p, d, d.images[0].label))}" width="1000" height="1250" fetchpriority="high"><span class="soon-tag caps">Coming soon</span></div>
+      <ul class="thumbs">${d.images.map((x, i) => `<li><button type="button" class="${i === 0 ? 'on' : ''}" data-view="${i}" aria-label="${esc(x.label)}" aria-pressed="${i === 0}"><img src="${x.src}" alt="" width="600" height="750" loading="lazy"></button></li>`).join('')}</ul>
+    </div>` : `<div class="gallery soon-gallery"><div class="vstage soon">${canArt}<span class="soon-tag caps">Coming soon</span></div></div>`;
     panel = `<div class="panel">
       <p class="caps gold">${p.numeral} &middot; ${esc(p.kind)}</p>
       <h1>${esc(p.name)}</h1>

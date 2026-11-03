@@ -90,6 +90,7 @@
 .mrp-line i{font-style:normal;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
 .mrp-line b{font:400 24px 'Bodoni Moda',serif;color:var(--ivory)}
 .piece.soon .slot{display:grid;place-items:center;background:radial-gradient(120% 90% at 50% 40%,#16130c 0,#060606 70%)}
+.piece.soon .slot img{position:absolute;inset:0}
 .piece.soon .soon-art{width:56%;height:auto;overflow:visible}
 .piece.soon .soon-tag{position:absolute;right:16px;top:16px;color:var(--obsidian);background:var(--gold);padding:7px 10px;font-size:10px;letter-spacing:.22em}
 .mrp-note{margin-top:22px;text-transform:none;letter-spacing:.02em}

@@ -210,10 +210,10 @@
       "name": "Coconut",
       "kind": "Coconut water",
       "status": "coming",
-      "tagline": "Young coconut water, sealed in a can. Coming soon.",
-      "lead": "The water of young green coconuts from Karnataka, pressed, filtered and cold-filled into cans. No pulp, no preservatives. In preparation now.",
-      "story": "Coconuts are harvested green, opened hygienically and their water filtered and cold-filled the same day, so nothing is added to keep it. Coconut water is naturally rich in potassium, around 250 mg in every 100 ml, with a light sweetness and a nutty finish that change a little with the season.",
-      "metaDescription": "OnyxAura Coconut: young coconut water from Karnataka, cold-filled into a 500 ml can with no preservatives. Coming soon. Register your interest.",
+      "tagline": "Young coconut water, naturally refreshing. Coming soon.",
+      "lead": "The water of young green coconuts from Karnataka, pressed, filtered and cold-filled into a 330 ml can. No pulp, no preservatives, nothing added. In preparation now.",
+      "story": "Coconuts are harvested green, opened hygienically and their water filtered and cold-filled the same day, so nothing is added to keep it. Coconut water is naturally rich in potassium, around 250 mg in every 100 ml, with a light sweetness and a nutty finish that change a little with the season. It goes into a matte white can, drawn with fine green lines.",
+      "metaDescription": "OnyxAura Coconut: young coconut water from Karnataka, cold-filled into a 330 ml can with no preservatives. Naturally refreshing. Coming soon. Register your interest.",
       "ph": [5, 5.4],
       "source": {
         "region": "Karnataka",
@@ -226,26 +226,35 @@
       "points": [
         "100% young coconut water, no pulp, no preservatives.",
         "Naturally about 250 mg potassium per 100 ml.",
-        "A 500 ml can. Coming soon."
+        "A 330 ml can. Coming soon."
       ],
       "specs": [
-        ["Can", "500 ml aluminium can"],
+        ["Can", "330 ml aluminium can, matte white with a green line drawing"],
         ["Natural pH", "5.0 to 5.4"],
         ["Process", "Pressed, filtered and cold-filled"],
         ["Status", "In preparation"]
       ],
-      "serve": "Serve chilled.",
+      "serve": "Serve chilled, straight from the can or over ice.",
       "variants": [
         {
-          "sku": "COC-CAN-500",
+          "sku": "COC-CAN-330",
           "format": "can",
           "label": "Can",
-          "volume": "500 ml",
+          "volume": "330 ml",
           "price": null,
+          "thumb": "/assets/products/coconut-thumb.jpg",
+          "card": ["/assets/products/coconut-full.jpg", "/assets/products/coconut-fresh.jpg"],
+          "images": [
+            { "src": "/assets/products/coconut-full.jpg", "label": "The can" },
+            { "src": "/assets/products/coconut-top.jpg", "label": "Lid and mark" },
+            { "src": "/assets/products/coconut-label.jpg", "label": "The label" },
+            { "src": "/assets/products/coconut-fresh.jpg", "label": "Fresh coconut" }
+          ],
           "packs": [{ "units": 1, "label": "Single" }]
         }
       ],
-      "defaultFormat": "can"
+      "defaultFormat": "can",
+      "og": "/assets/products/coconut-og.jpg"
     }
   ]
 }

@@ -30,8 +30,8 @@
   }
 
   /* =====================================================================
-     3D: the Gold bottle, modelled from the concept sheet (assets/gold-bottle.js, three.js, loaded on demand).
-     Without WebGL or modules the render of the bottle stays in place.
+     3D: the Gold bottle, modelled from the product shoot (assets/gold-bottle.js, three.js, loaded on demand).
+     Without WebGL or modules the photograph of the bottle stays in place.
      ===================================================================== */
   var bottleP = null;
   function loadBottle() { if (!bottleP) bottleP = import('/assets/gold-bottle.js').catch(function () { return null; }); return bottleP; }
@@ -97,7 +97,9 @@
 
   /* ---------- 1. hero and the vessel viewer ---------- */
   var heroBox = $('[data-viewer=hero]'), vesselBox = $('[data-viewer=vessel]'), vessel = null, pendingNo = 14;
-  if (heroBox) onceNear(heroBox, function () { mountBottle(heroBox, { auto: true, yaw: -.5, zoom: 1.02 }); });
+  // what the glass shows through it: the gold glow drawn behind each stage in gold.css
+  var HALO = '#e8d78a';
+  if (heroBox) onceNear(heroBox, function () { mountBottle(heroBox, { auto: true, yaw: -.5, zoom: 1.02, backdrop: { glow: HALO, a0: .3, t1: .56, a1: .1, t2: .76, size: [.58, .46] } }); });
   var NAMES = { front: 'Front', side: 'Side', top: 'Top', base: 'Base' };
   var seg = $$('.v-ui [data-look]'), tag = $('[data-vtag]'), apartB = $('[data-apart]'), dimsB = $('[data-dims]'), lr = $('.v-ui input[type=range]'), turn = $('.v-ui .turn');
   var press = function (b, on) { b.classList.toggle('on', on); b.setAttribute('aria-pressed', on ? 'true' : 'false'); };
@@ -127,10 +129,41 @@
     turn.addEventListener('click', function () { spin = !spin; turn.setAttribute('aria-pressed', spin ? 'true' : 'false'); turn.textContent = spin ? 'Turning' : 'Still'; if (vessel) vessel.auto(spin); });
   }
   if (vesselBox) onceNear(vesselBox, function () {
-    mountBottle(vesselBox, { auto: spin, yaw: -.35, number: pendingNo, zoomable: true }).then(function (v) { vessel = v; });
+    mountBottle(vesselBox, { auto: spin, yaw: -.35, number: pendingNo, zoomable: true, backdrop: { glow: HALO, a0: .2, t1: .72, a1: 0, t2: .73, at: [.5, .46], size: [.62, .52] } }).then(function (v) { vessel = v; });
   });
   // the base link in the edition sends the inspector to the base, where the number is etched
   $$('[data-base-link]').forEach(function (a) { a.addEventListener('click', function () { setTimeout(function () { look('base'); }, 450); }); });
+
+  /* ---------- 3b. the product shoot: each photograph opens full size; the stone-spa band settles as it arrives ---------- */
+  var shots = $$('[data-full]');
+  if (shots.length && window.HTMLDialogElement) {
+    var lb = document.createElement('dialog');
+    lb.className = 'lightbox'; lb.setAttribute('aria-label', 'The product shoot');
+    lb.innerHTML = '<figure class="lb-fig"><img alt=""></figure>' +
+      '<div class="lb-bar"><button type="button" class="sq" data-lb="-1" aria-label="Previous photograph">&larr;</button><output class="small" aria-live="polite"></output><button type="button" class="sq" data-lb="1" aria-label="Next photograph">&rarr;</button></div>' +
+      '<button type="button" class="sq lb-close" aria-label="Close">&times;</button>';
+    document.body.appendChild(lb);
+    var lbImg = $('img', lb), lbOut = $('output', lb), at = 0, sx = null;
+    var show = function (i) {
+      at = (i + shots.length) % shots.length;
+      var a = shots[at], label = $('span', a);
+      lbImg.src = a.getAttribute('href'); lbImg.alt = $('img', a).alt;
+      lbImg.style.animation = 'none'; void lbImg.offsetWidth; lbImg.style.animation = '';
+      lbOut.textContent = (label ? label.textContent + ' · ' : '') + (at + 1) + ' / ' + shots.length;
+    };
+    shots.forEach(function (a, i) {
+      a.addEventListener('click', function (e) { e.preventDefault(); show(i); lb.showModal(); document.documentElement.style.overflow = 'hidden'; });
+    });
+    lb.addEventListener('close', function () { document.documentElement.style.overflow = ''; shots[at].focus(); });
+    $$('[data-lb]', lb).forEach(function (b) { b.addEventListener('click', function () { show(at + parseInt(b.getAttribute('data-lb'), 10)); }); });
+    $('.lb-close', lb).addEventListener('click', function () { lb.close(); });
+    lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lb-fig')) lb.close(); });
+    lb.addEventListener('keydown', function (e) { if (e.key === 'ArrowRight') show(at + 1); if (e.key === 'ArrowLeft') show(at - 1); });
+    lb.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', function (e) { if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(at + (dx < 0 ? 1 : -1)); sx = null; });
+  }
+  var band = $('[data-band]');
+  if (band) onceVisible(band, function () { band.classList.add('in'); }, .2);
 
   /* ---------- 2. the edition: a specimen number ---------- */
   var odo = $('[data-odo]');

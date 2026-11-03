@@ -186,7 +186,7 @@
   /* the Gold bottle on the home page: the model from the Gold page, turning slowly (assets/gold-bottle.js) */
   var g3 = document.getElementById('gold3d');
   if (g3) whenNear(g3, function () {
-    import('/assets/gold-bottle.js').then(function (m) { m.mount(g3, { auto: !reduce, yaw: -.6, zoom: 1.02, shadow: true }); }).catch(function () {});
+    import('/assets/gold-bottle.js').then(function (m) { m.mount(g3, { auto: !reduce, yaw: -.6, zoom: 1.02, shadow: true, backdrop: { glow: '#c5b358', a0: .07, t1: .9, a1: 0, t2: .91, size: [.9, .7] } }); }).catch(function () {});
   }, 600);
 
   /* line drawings draw themselves the first time they are seen */
