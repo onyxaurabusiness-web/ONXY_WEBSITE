@@ -4,7 +4,7 @@
 const fs = require('fs'), path = require('path');
 const root = path.join(__dirname, '..');
 const cat = JSON.parse(fs.readFileSync(path.join(root, 'assets/catalogue.json'), 'utf8'));
-const SITE = 'https://onyxaura.in';
+const SITE = 'https://www.onyxaura.in';
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const inr = n => '₹' + n.toLocaleString('en-IN');

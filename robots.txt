@@ -3,4 +3,4 @@ Allow: /
 Disallow: /api/
 Disallow: /checkout
 Disallow: /order
-Sitemap: https://onyxaura.in/sitemap.xml
+Sitemap: https://www.onyxaura.in/sitemap.xml

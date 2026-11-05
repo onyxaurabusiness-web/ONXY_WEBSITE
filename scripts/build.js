@@ -31,7 +31,7 @@ const stubPage = (key, title, h1, line) => `<!DOCTYPE html>
 <meta name="description" content="${line}">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#070707">
-<link rel="canonical" href="https://onyxaura.in/${key}">
+<link rel="canonical" href="https://www.onyxaura.in/${key}">
 <link rel="icon" href="/assets/logo-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
